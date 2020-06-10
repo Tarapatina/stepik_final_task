@@ -1,6 +1,6 @@
-from .pages.product_page import ProductPage
-from .pages.basket_page import BasketPage
-from .pages.login_page import LoginPage
+from pages.product_page import ProductPage
+from pages.basket_page import BasketPage
+from pages.login_page import LoginPage
 import pytest
 import random
 import time
@@ -19,7 +19,7 @@ def test_guest_cant_see_success_message_after_adding_product_to_basket(browser):
     product_page.should_be_book_price()
 
 
-def test_guest_cant_see_success_message(self, browser):
+def test_guest_cant_see_success_message(browser):
     link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
     product_page = ProductPage(browser, link)
     product_page.open()
